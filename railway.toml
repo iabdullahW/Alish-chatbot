@@ -1,0 +1,10 @@
+[build]
+# Command to build the app
+command = "npm install && npm run build"
+
+[deploy]
+# Command to serve the app after building
+command = "npm run preview"
+
+# Port on which the app will run
+port = 3000
