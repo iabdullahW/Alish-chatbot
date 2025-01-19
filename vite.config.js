@@ -1,7 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Get the PORT from the environment variable
+const port = process.env.PORT || 3000;
+
 export default defineConfig({
   plugins: [react()],
-})
+  server: {
+    port: port, // Use the assigned port
+    strictPort: true, // Ensure the app uses the assigned port
+  },
+});
